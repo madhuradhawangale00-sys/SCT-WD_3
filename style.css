@@ -167,3 +167,21 @@ h2 {
     transform: translateX(5px);
     box-shadow: 0 0 15px rgba(0, 242, 254, 0.15);
 }
+
+.option-btn.correct {
+    background: rgba(0, 255, 135, 0.15) !important;
+    border-color: var(--correct-green) !important;
+    color: var(--correct-green);
+    font-weight: 600;
+}
+
+.option-btn.wrong {
+    background: rgba(255, 51, 102, 0.15) !important;
+    border-color: var(--wrong-red) !important;
+    color: var(--wrong-red);
+}
+
+.option-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
