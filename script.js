@@ -25,3 +25,21 @@ const quizData = [
         correct: 1
     }
 ];
+
+const startScreen = document.getElementById('start-screen');
+const gameScreen = document.getElementById('game-screen');
+const resultScreen = document.getElementById('result-screen');
+
+const startBtn = document.getElementById('start-btn');
+const nextBtn = document.getElementById('next-btn');
+const restartBtn = document.getElementById('restart-btn');
+
+const questionCounter = document.getElementById('question-counter');
+const progressFill = document.getElementById('progress-fill');
+const currentScoreElement = document.getElementById('current-score');
+const questionText = document.getElementById('question-text');
+const optionsContainer = document.getElementById('options-container');
+
+const finalScoreElement = document.getElementById('final-score');
+const totalPossibleElement = document.getElementById('total-possible');
+const feedbackText = document.getElementById('feedback-text');
