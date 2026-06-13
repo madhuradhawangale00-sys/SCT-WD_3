@@ -46,3 +46,14 @@ const feedbackText = document.getElementById('feedback-text');
 
 let currentQuestionIndex = 0;
 let score = 0;
+
+startBtn.addEventListener('click', startQuiz);
+nextBtn.addEventListener('click', () => {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < quizData.length) {
+        loadQuestion();
+    } else {
+        showResults();
+    }
+});
+restartBtn.addEventListener('click', startQuiz);
