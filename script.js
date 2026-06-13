@@ -69,3 +69,25 @@ function startQuiz() {
     
     loadQuestion();
 }
+
+function loadQuestion() {
+    resetState();
+    const currentQuestion = quizData[currentQuestionIndex];
+    
+    // Set UI Texts
+    questionText.innerText = currentQuestion.question;
+    questionCounter.innerText = `Question ${currentQuestionIndex + 1} of ${quizData.length}`;
+    
+    // Update Progress Bar
+    const progressPercent = ((currentQuestionIndex) / quizData.length) * 100;
+    progressFill.style.width = `${progressPercent}%`;
+
+    // Render Option Buttons
+    currentQuestion.options.forEach((option, index) => {
+        const button = document.createElement('button');
+        button.innerText = option;
+        button.classList.add('option-btn');
+        button.addEventListener('click', () => selectOption(button, index));
+        optionsContainer.appendChild(button);
+    });
+}
