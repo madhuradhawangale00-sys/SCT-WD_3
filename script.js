@@ -91,3 +91,10 @@ function loadQuestion() {
         optionsContainer.appendChild(button);
     });
 }
+
+function resetState() {
+    nextBtn.disabled = true;
+    while (optionsContainer.firstChild) {
+        optionsContainer.removeChild(optionsContainer.firstChild);
+    }
+}
