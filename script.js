@@ -117,3 +117,22 @@ function selectOption(selectedButton, index) {
     allButtons.forEach(btn => btn.disabled = true);
     nextBtn.disabled = false;
 }
+function showResults() {
+    gameScreen.classList.remove('active');
+    resultScreen.classList.add('active');
+    
+    // Animate final fill to 100%
+    progressFill.style.width = '100%';
+
+    finalScoreElement.innerText = score;
+    totalPossibleElement.innerText = `out of ${quizData.length}`;
+
+    // Conditional Feedback text
+    if (score === quizData.length) {
+        feedbackText.innerText = "Perfect Score! You're a Master!";
+    } else if (score >= quizData.length * 0.6) {
+        feedbackText.innerText = "Great Job! Well done.";
+    } else {
+        feedbackText.innerText = "Keep practicing! Try again.";
+    }
+}
