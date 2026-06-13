@@ -141,3 +141,29 @@ h2 {
     font-size: 0.9rem;
     color: var(--accent-cyan);
 }
+
+.options-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.option-btn {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 16px 20px;
+    text-align: left;
+    color: var(--text-main);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.option-btn:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: var(--accent-cyan);
+    transform: translateX(5px);
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.15);
+}
