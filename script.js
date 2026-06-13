@@ -98,3 +98,22 @@ function resetState() {
         optionsContainer.removeChild(optionsContainer.firstChild);
     }
 }
+
+function selectOption(selectedButton, index) {
+    const correctAnswerIndex = quizData[currentQuestionIndex].correct;
+    const allButtons = optionsContainer.querySelectorAll('.option-btn');
+    
+    if (index === correctAnswerIndex) {
+        selectedButton.classList.add('correct');
+        score++;
+        currentScoreElement.innerText = score;
+    } else {
+        selectedButton.classList.add('wrong');
+        // highlight the right answer for transparency
+        allButtons[correctAnswerIndex].classList.add('correct');
+    }
+
+    // Disable all options after submission
+    allButtons.forEach(btn => btn.disabled = true);
+    nextBtn.disabled = false;
+}
