@@ -43,3 +43,6 @@ const optionsContainer = document.getElementById('options-container');
 const finalScoreElement = document.getElementById('final-score');
 const totalPossibleElement = document.getElementById('total-possible');
 const feedbackText = document.getElementById('feedback-text');
+
+let currentQuestionIndex = 0;
+let score = 0;
