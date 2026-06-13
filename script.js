@@ -57,3 +57,15 @@ nextBtn.addEventListener('click', () => {
     }
 });
 restartBtn.addEventListener('click', startQuiz);
+
+function startQuiz() {
+    currentQuestionIndex = 0;
+    score = 0;
+    currentScoreElement.innerText = score;
+    
+    startScreen.classList.remove('active');
+    resultScreen.classList.remove('active');
+    gameScreen.classList.add('active');
+    
+    loadQuestion();
+}
