@@ -71,3 +71,26 @@ body {
     from { opacity: 0; transform: translateY(15px); }
     to { opacity: 1; transform: translateY(0); }
 }
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 4px;
+    text-align: center;
+    background: linear-gradient(45deg, var(--accent-cyan), var(--accent-purple));
+    
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
