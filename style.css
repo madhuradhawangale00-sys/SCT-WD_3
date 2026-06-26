@@ -78,7 +78,8 @@ h1 {
     letter-spacing: 4px;
     text-align: center;
     background: linear-gradient(45deg, var(--accent-cyan), var(--accent-purple));
-    
+    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 10px;
 }
